@@ -1,0 +1,43 @@
+{
+  "name": "cocktail-list",
+  "version": "1.0.0",
+  "description": "An app that lists cocktails.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npm run watch-app",
+    "watch-app": "webpack-dev-server --progress --colors --inline --content-base demo/",
+    "watch-api": "nodemon api/server.js",
+    "build": "webpack"
+  },
+  "author": "Robert Kuncewicz",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "html-loader": "^0.3.0",
+    "jquery": "^2.1.4",
+    "jsx-loader": "^0.13.2",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "ngtemplate-loader": "^1.3.1",
+    "nodemon": "^1.8.1",
+    "path": "^0.12.7",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "bootstrap-webpack": "0.0.5",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "flux": "^2.1.1",
+    "lodash": "^3.10.1",
+    "react": "^0.14.5",
+    "react-addons-linked-state-mixin": "^0.14.5",
+    "react-bootstrap": "^0.28.1",
+    "react-bootstrap-datetimepicker": "0.0.22",
+    "react-dom": "^0.14.3",
+    "superagent": "^1.6.1"
+  }
+}
