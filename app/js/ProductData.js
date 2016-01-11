@@ -7,7 +7,7 @@ module.exports = {
         {
             "name": "Negroni",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-negroni-thumb-1500xauto-421623.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-negroni.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/04/negroni-cocktail-recipe-gin-campari-vermouth.html",
             "ingredients": [
                 {
@@ -40,7 +40,7 @@ module.exports = {
         {
             "name": "Old Fashioned",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3-thumb-1500xauto-414542.jpg",
+            "photo": "20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/06/traditional-old-fashioned-recipe.html",
             "ingredients": [
                 {
@@ -78,7 +78,7 @@ module.exports = {
         {
             "name": "Martine",
             "author": "Michael Dietsch",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-martinez-thumb-1500xauto-421594.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-martinez.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/09/martinez-cocktail-gin-cocktail-recipe.html",
             "ingredients": [
                 {
@@ -124,7 +124,7 @@ module.exports = {
         {
             "name": "Martini",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-martini-thumb-1500xauto-421595.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-martini.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/06/the-martini-recipe.html",
             "ingredients": [
                 {
@@ -132,18 +132,23 @@ module.exports = {
                         "quantity": 2,
                         "unit": "ounce"
                     },
-                    "ingredient": "dry gin",
+                    "ingredient": "dry gin", 
+                },
+                {
                     "size": {
                         "quantity": 1,
                         "unit": "ounce"
                     },
                     "ingredient": "dry vermouth",
+
+                },
+                {
                     "size": {
                         "quantity": 1,
                         "unit": "dash"
                     },
                     "ingredient": "orange bitter"
-                }
+                },
             ],
             "directions": [
                 "Combine ingredients in a mixing glass and fill with ice. Stir well to chill and strain into a chilled cocktail glass. Twist a piece of lemon peel over the drink and use as garnish, or, if you must, toss in an olive."
@@ -152,7 +157,7 @@ module.exports = {
         {
             "name": "Manhattan Cocktail",
             "author": "The Serious Eats Team",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-manhattan-thumb-1500xauto-421618.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-manhattan.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/01/cocktails-manhattan-recipe.html",
             "ingredients": [
                 {
@@ -191,7 +196,7 @@ module.exports = {
         {
             "name": "The Brooklyn Cocktail",
             "author": "Blake Royer",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-Brooklyn-thumb-1500xauto-421619.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-Brooklyn.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/02/the-brooklyn-cocktail-rye-maraschino-vermouth.html",
             "ingredients": [
                 {
@@ -244,7 +249,7 @@ module.exports = {
         {
             "name": "Daiquiri",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-daiquiri-thumb-1500xauto-421596.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-daiquiri.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/05/daiquiri-recipe.html",
             "ingredients": [
                 {
@@ -274,9 +279,9 @@ module.exports = {
             ]
         },
         {
-            "name": "Classic Margarito",
+            "name": "Classic Margarita",
             "author": "The Serious Eats Team",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-margarita-thumb-1500xauto-421493.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-margarita.jpg",
             "url": "http://www.seriouseats.com/recipes/2015/04/classic-margarita-recipe-tequila-cocktail.html",
             "ingredients": [
                 {
@@ -324,7 +329,7 @@ module.exports = {
                 {
             "name": "Sidecar",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2014/09/20140910-cocktail-techniques-michael-deitsch-orange-twist-vicky-wasik-50-thumb-1500xauto-411902.jpg",
+            "photo": "20141101-cognac-sidecar-carey-jones.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/11/sidecar-drink-cocktail-recipe.html",
             "ingredients": [
                 {
@@ -364,7 +369,7 @@ module.exports = {
         {
             "name": "French 75",
             "author": "Maggie Hoffman",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-french75-thumb-1500xauto-421620.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-french75.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/03/french-75-cocktial-gin-champagne-lemon.html",
             "ingredients": [
                 {
@@ -412,7 +417,7 @@ module.exports = {
         {
             "name": "The Ultimate Fully-Loaded Bloody Mary",
             "author": "J. KENJI LÓPEZ-ALT",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2011/06/20110601-bloody-mary-primary-thumb-625xauto-163554.jpg",
+            "photo": "twase-20150320-21.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/06/the-ultimate-fully-loaded-bloody-mary-recipe.html",
             "ingredients": [
                 {
@@ -508,7 +513,7 @@ module.exports = {
         {
             "name": "Irish Coffee",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-irish-coffee-thumb-1500xauto-421621.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-irish-coffee.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/03/irish-coffee-drink-st-patricks-dayrecipe.html",
             "ingredients": [
                 {
@@ -543,7 +548,7 @@ module.exports = {
         {
             "name": "Jack Rose",
             "author": "J. KENJI LÓPEZ-ALT",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-jack-rose-thumb-1500xauto-421622.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-jack-rose.jpg",
             "url": "http://www.seriouseats.com/recipes/2014/08/jack-rose-cocktail-recipe.html",
             "ingredients": [
                 {
@@ -585,7 +590,7 @@ module.exports = {
         {
             "name": "Boulevardier",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-boulevardier-thumb-1500xauto-421624.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-boulevardier.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/09/boulevardier-recipe.html",
             "ingredients": [
                 {
@@ -630,7 +635,7 @@ module.exports = {
         {
             "name": "The Sazerac",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-sazerac-thumb-1500xauto-421625.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-sazerac.jpg",
             "url": "http://www.seriouseats.com/recipes/2007/07/cocktails-recipes-the-sazerac.html",
             "ingredients": [
                 {
@@ -697,7 +702,7 @@ module.exports = {
         {
             "name": "Vieux Carré",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-vieux-carre-thumb-1500xauto-421626.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-vieux-carre.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/07/vieux-carre-recipe.html",
             "ingredients": [
                 {
@@ -750,7 +755,7 @@ module.exports = {
         {
             "name": "Ramos Fizz",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-robyn-lee-ramos-gin-fizz-thumb-1500xauto-421627.jpg",
+            "photo": "20150323-cocktails-robyn-lee-ramos-gin-fizz.jpg",
             "url": "http://www.seriouseats.com/recipes/2009/06/time-for-a-drink-ramos-fizz.html",
             "ingredients": [
                 {
@@ -812,7 +817,7 @@ module.exports = {
         {
             "name": "Mint Julep",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-mint-julep-thumb-1500xauto-421628.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-mint-julep.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/04/how-to-make-a-mint-julep-recipe-derby-day.html",
             "ingredients": [
                 {
@@ -850,7 +855,7 @@ module.exports = {
         {
             "name": "Whiskey Sour",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-whiskey-sour-thumb-1500xauto-421629.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-whiskey-sour.jpg",
             "url": "http://www.seriouseats.com/recipes/2007/10/cocktails-whiskey-sour.html",
             "ingredients": [
                 {
@@ -889,7 +894,7 @@ module.exports = {
         {
             "name": "Mai Tai",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-mai-tai-thumb-1500xauto-421630.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-mai-tai.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/03/time-for-a-drink-mai-tai-recipe.html",
             "ingredients": [
                 {
@@ -941,7 +946,7 @@ module.exports = {
         {
             "name": "Planters Punch",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-robyn-lee-planters-punch-thumb-1500xauto-421631.jpg",
+            "photo": "20150406-cocktails-planters-punch-robyn-lee-1.jpg",
             "url": "http://www.seriouseats.com/recipes/2010/07/planters-punch-cocktail-recipe.html",
             "ingredients": [
                 {
@@ -980,7 +985,7 @@ module.exports = {
         {
             "name": "Cosmopolitan",
             "author": "MICHAEL DIETSCH",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-cosmopolitan-thumb-1500xauto-421633.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-cosmopolitan.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/10/how-to-make-a-cosmopolitan-cocktail-best-recipe.html",
             "ingredients": [
                 {
@@ -1025,7 +1030,7 @@ module.exports = {
         {
             "name": "Pisco Sour",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-pisco-sour-thumb-1500xauto-421632.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-pisco-sour.jpg",
             "url": "http://www.seriouseats.com/recipes/2011/02/time-for-a-drink-pisco-sour.html",
             "ingredients": [
                 {
@@ -1071,7 +1076,7 @@ module.exports = {
         {
             "name": "Tom Collins",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-tom-collins-thumb-1500xauto-421634.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-tom-collins.jpg",
             "url": "http://www.seriouseats.com/recipes/2008/08/tom-collins-recipe.html",
             "ingredients": [
                 {
@@ -1105,7 +1110,7 @@ module.exports = {
         {
             "name": "The Last Word",
             "author": "Paul Clarke",
-            "photo": "http://www.seriouseats.com/recipes/assets_c/2015/04/20150323-cocktails-vicky-wasik-last-word-thumb-1500xauto-421635.jpg",
+            "photo": "20150323-cocktails-vicky-wasik-last-word.jpg",
             "url": "http://www.seriouseats.com/recipes/2007/10/cocktails-the-last-word.html",
             "ingredients": [
                 {

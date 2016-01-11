@@ -2,7 +2,9 @@ var React = require('react'),
     LinkedStateMixin = require('react-addons-linked-state-mixin'),
     CocktailStore = require('../stores/CocktailStore'),
     Cocktail = require('../utils/Cocktail'),
-    _ = require('lodash');
+    CocktailList = require('./CocktailList.react'),
+    _ = require('lodash'),
+    superagent = require('superagent');
 
 // Define main Controller View
 var CocktailApp = React.createClass({
@@ -18,7 +20,8 @@ var CocktailApp = React.createClass({
                     cocktail.url,
                     cocktail.directions,
                     cocktail.ingredients);
-            })
+            }),
+            gridLayout: 0
         };
     },
 
@@ -30,39 +33,29 @@ var CocktailApp = React.createClass({
     componentWillUnmount: function() {
     },
 
+    changeGrid: function(value, event) {
+        this.setState({gridLayout: value});
+    },
+
     // Render our child components, passing state via props
     render: function() {
-        console.log(this.state.cocktails);
-        var cocktails = this.state.cocktails;
-        var cocktailNames = [];
-        var list = cocktails.map(function(cocktail) {
-            cocktailNames.push(cocktail.name);
-            return (
-                <div className="cocktail" key={cocktail.name}>
-                    <h3>{cocktail.name}</h3>
-                    <ul>
-                        <li>
-                            <h4>Author: {cocktail.author}</h4>
-                            <h4>Photo:<a> {cocktail.photo}</a></h4>
-                            <h4>Url: <a>{cocktail.url}</a></h4>
-                            <h4>Ingredients: </h4>
-                            <ul>
-                            {cocktail.ingredients.map(function(ingredient) {
-                                return (
-                                    <li key={ingredient.main.item}>{ingredient.main.item}</li>
-                                )
-                            })}
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            )
-        });
-
         return (
-            <div className="CocktailApp container-fluid">
-                <h1>Cocktail List</h1>
-                {list}
+            <div className="CocktailApp">
+                <div className="app-title">
+                    <h1>Cocktail List</h1>
+                </div>
+                <div className="grid-selection">
+                    <button onClick={this.changeGrid.bind(this, 0)}>
+                        <span className="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                    </button>
+                    <button onClick={this.changeGrid.bind(this, 1)}>
+                        <span className="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                    </button>
+                    <button onClick={this.changeGrid.bind(this, 2)}>
+                        <span className="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <CocktailList gridLayout={this.state.gridLayout} cocktails={this.state.cocktails} />
             </div>
         );
     },

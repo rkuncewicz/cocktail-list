@@ -5,6 +5,14 @@ class Size {
         this.quantity = quantity;
         this.unit = unit;
     }
+
+    format() {
+        if (this.quantity && this.unit) {
+            return `${this.quantity} ${this.unit}`;
+        } else {
+            return this.quantity || this.unit;
+        }
+    }
 }
 
 class Ingredient {
@@ -12,6 +20,10 @@ class Ingredient {
         this.size = size ? new Size(size.quantity, size.unit) : null;
         this.item = item;
         this.optional = optional || false;
+    }
+
+    format () {
+        return this.size ? `${this.size.format()} ${this.item}` : this.item;
     }
 }
 

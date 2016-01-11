@@ -1,1 +1,78 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
+
+.CocktailApp {
+    .container-fixed();
+    font-size: 12px;
+
+    .grid-selection {
+        .row();
+        text-align: center;
+
+        button {
+            .make-md-column(4);
+            background: none;
+            border: none;
+            font-size: 3em;
+        }
+    }
+
+    .app-title {
+        text-align: center;
+
+        h1 {
+            font-size: 4.5em;
+            padding: 1em 0 .25em;
+        }   
+    }
+
+    .cocktail {
+        .row();
+        padding: 0 3% 2em;
+        page-break-before: always;
+
+        h3 {
+            font-size: 2.5em;
+            padding: 0 0 .25em;
+        }
+
+        h4 {
+            text-shadow: 1px 1px 1px #000;
+            color: #30a2cc;
+        }
+
+        .cocktail-title {
+            text-align: center;
+            margin: 0 10em;
+            color: #30a2cc;
+            text-transform: uppercase;
+        }
+
+        .cocktail-img {
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        .cocktail-info-wrapper {
+            margin-top: 1.5em;
+
+            .ingredients {
+                .make-xs-column(3);
+                .make-md-column(2);
+                li {
+                    font-size: .925em;
+                    margin-bottom: .75em;
+                }
+            }
+
+            .directions {
+                .make-xs-column(9);
+                .make-md-column(10);
+            }
+        }
+    }
+}
