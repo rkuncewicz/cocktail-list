@@ -21,7 +21,7 @@ var CocktailApp = React.createClass({
                     cocktail.directions,
                     cocktail.ingredients);
             }),
-            gridLayout: 0
+            gridLayout: 1
         };
     },
 
@@ -45,13 +45,13 @@ var CocktailApp = React.createClass({
                     <h1>Cocktail List</h1>
                 </div>
                 <div className="grid-selection">
-                    <button onClick={this.changeGrid.bind(this, 0)}>
+                    <button onClick={this.changeGrid.bind(this, 1)}>
                         <span className="glyphicon glyphicon-stop" aria-hidden="true"></span>
                     </button>
-                    <button onClick={this.changeGrid.bind(this, 1)}>
+                    <button onClick={this.changeGrid.bind(this, 2)}>
                         <span className="glyphicon glyphicon-th-large" aria-hidden="true"></span>
                     </button>
-                    <button onClick={this.changeGrid.bind(this, 2)}>
+                    <button onClick={this.changeGrid.bind(this, 3)}>
                         <span className="glyphicon glyphicon-th" aria-hidden="true"></span>
                     </button>
                 </div>
