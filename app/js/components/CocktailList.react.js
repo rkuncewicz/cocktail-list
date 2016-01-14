@@ -2,7 +2,6 @@ var React = require('react'),
     LinkedStateMixin = require('react-addons-linked-state-mixin'),
     CocktailStore = require('../stores/CocktailStore'),
     Cocktail = require('./Cocktail.react'),
-    classNames = require('classnames'),
     _ = require('lodash'),
     superagent = require('superagent');
 
@@ -28,19 +27,21 @@ var CocktailList = React.createClass({
 
         var cocktailNames = [];
         var list = [];
-        for (i=0; i < cocktails.length; i = i + this.props.gridLayout ) {
+        var rowNum = this.props.gridLayout[0];
+        var colNum = this.props.gridLayout[1];
+        for (i=0; i < cocktails.length; i = i + rowNum ) {
             var cocktailRow = [];
-            for (j=0; j < this.props.gridLayout; j++) {
+            for (j=0; j < rowNum; j++) {
                 var columnNum = i + j;
                 cocktailRow.push(
-                    <div className={"grid-row-" + this.props.gridLayout}>
+                    <div className={"grid-row-" + rowNum}>
                         <Cocktail key={columnNum} cocktail={cocktails[columnNum]} />
                     </div>
                 );
             }
 
             list.push(
-                <div className="row">
+                <div className="row cocktail-row">
                     {cocktailRow}
                 </div>
             )
