@@ -3,6 +3,8 @@ var React = require('react'),
     CocktailStore = require('../stores/CocktailStore'),
     Cocktail = require('../utils/Cocktail'),
     CocktailList = require('./CocktailList.react'),
+    CocktailIndex = require('./CocktailIndex.react'),
+    Search = require('./Search.react'),
     _ = require('lodash'),
     superagent = require('superagent');
 
@@ -21,7 +23,8 @@ var CocktailApp = React.createClass({
                     cocktail.directions,
                     cocktail.ingredients);
             }),
-            gridLayout: [1,1]
+            gridLayout: [1,1],
+            searchValue: ''
         };
     },
 
@@ -37,6 +40,10 @@ var CocktailApp = React.createClass({
         this.setState({gridLayout: value});
     },
 
+    handleSearchChange: function (event) {
+        this.setState({searchValue: event.target.value});
+    },
+
     // Render our child components, passing state via props
     render: function() {
         return (
@@ -48,11 +55,9 @@ var CocktailApp = React.createClass({
                     <button onClick={this.changeGrid.bind(this, [1,1])}>
                         <span className="glyphicon glyphicon-stop" aria-hidden="true"></span>
                     </button>
-                    <button onClick={this.changeGrid.bind(this, [2,1])}>
-                        <div className="glyphicon-double-grid">
-                            <span className="glyphicon glyphicon-th-large glyphicon-double-grid" aria-hidden="true"></span>
-                            <span className="white-rectangle"></span>
-                        </div>
+                    <button className="double-grid-icon" onClick={this.changeGrid.bind(this, [2,1])}>
+                        <span className="glyphicon glyphicon-stop glyphicon-doublegrid double-grid-left" aria-hidden="true"></span>
+                        <span className="glyphicon glyphicon-stop glyphicon-doublegrid" aria-hidden="true"></span>
                     </button>
                     <button onClick={this.changeGrid.bind(this, [2,2])}>
                         <span className="glyphicon glyphicon-th-large" aria-hidden="true"></span>
@@ -61,7 +66,9 @@ var CocktailApp = React.createClass({
                         <span className="glyphicon glyphicon-th" aria-hidden="true"></span>
                     </button>
                 </div>
-                <CocktailList gridLayout={this.state.gridLayout} cocktails={this.state.cocktails} />
+                <Search handleSearchChange={this.handleSearchChange} searchValue={this.state.searchValue} />
+                <CocktailIndex cocktails={this.state.cocktails} />
+                <CocktailList gridLayout={this.state.gridLayout} cocktails={this.state.cocktails} filter={this.state.searchValue}/>
             </div>
         );
     },

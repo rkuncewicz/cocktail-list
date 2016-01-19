@@ -17,14 +17,16 @@ var Cocktail = React.createClass({
         var cocktail = this.props.cocktail;
         if (!cocktail) return (<div></div>);
         return (
-            <div className="cocktail" key={cocktail.name}>
+            <div className="cocktail" id={cocktail.name} key={cocktail.name}>
                 <div className="cocktail-title-wrapper">
                     <div className="cocktail-title">
                         <h3>{cocktail.name}</h3>
                     </div>
                 </div>
                 <div className="cocktail-img">
-                    <img src={"./static/" + cocktail.photo}/>
+                    <a href={cocktail.url}>
+                        <img src={"./static/" + cocktail.photo}/>
+                    </a>
                 </div>
                 <div className="cocktail-info-wrapper">
                     <div className="ingredients">

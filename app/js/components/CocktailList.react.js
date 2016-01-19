@@ -5,10 +5,6 @@ var React = require('react'),
     _ = require('lodash'),
     superagent = require('superagent');
 
-var cocktailsGrid = {
-
-}
-
 // Define main Controller View
 var CocktailList = React.createClass({
 
@@ -18,6 +14,16 @@ var CocktailList = React.createClass({
 
     // Remove change listeners from stores
     componentWillUnmount: function() {
+    },
+
+    filterCocktail: function(cocktail) {
+        if (!cocktail) return false;
+        
+        var cocktailName = cocktail.name.toLowerCase();
+        var filter = this.props.filter.toLowerCase();
+        if (cocktailName.search(filter) != -1) {
+            return true;
+        } else return false;
     },
 
     // Render our child components, passing state via props
@@ -33,11 +39,14 @@ var CocktailList = React.createClass({
             var cocktailRow = [];
             for (j=0; j < rowNum; j++) {
                 var columnNum = i + j;
-                cocktailRow.push(
-                    <div className={"grid-row-" + rowNum}>
-                        <Cocktail key={columnNum} cocktail={cocktails[columnNum]} />
-                    </div>
-                );
+                var cocktail = cocktails[columnNum];
+                if (self.filterCocktail(cocktail)) {
+                    cocktailRow.push(
+                        <div className={"grid-row-" + rowNum}>
+                            <Cocktail key={columnNum} cocktail={cocktail} />
+                        </div>
+                    );
+                }
             }
 
             list.push(

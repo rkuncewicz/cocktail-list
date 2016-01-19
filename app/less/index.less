@@ -4,36 +4,31 @@
     .container-fixed();
     font-size: 12px;
 
-    .glyphicon-double-grid {
-        display: table;
-
-        .white-rectangle {
-            width: 0.95em;
-            height: 0.4em;
-            background-color: white;
-            display: table;
-            position: absolute;  
-            top: 0.94em;
-            right: 0.48em;
-        }
-
-        .glyphicon {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-            top: 0.33em;
-        }
-    }
-
     .grid-selection {
         .row();
         text-align: center;
 
+        .double-grid-icon {
+            max-width: 66px;
+            width: 66px;
+        }
+
         button {
-            .make-md-column(4);
+            .make-md-column(3);
             background: none;
             border: none;
             font-size: 3em;
+
+            .glyphicon-doublegrid {
+                height: 100%;
+                width: 50%;
+                font-size: 0.6em;
+                top: -4px;
+            }
+
+            .double-grid-left {
+                left: -2px;
+            }
         }
     }
 
@@ -44,6 +39,34 @@
             font-size: 4.5em;
             padding: 1em 0 .25em;
         }   
+    }
+
+    .cocktail-index {
+        margin: 2em;
+
+        .cocktail-index-title {
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px #000;
+            color: #30a2cc;
+        }
+
+        ul {
+            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+            -moz-column-count: 2; /* Firefox */
+            column-count: 2;
+
+            list-style-type: none;
+
+            li {
+                margin: 10px 0;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+        
     }
 
     .cocktail-row {
