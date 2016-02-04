@@ -23,12 +23,12 @@ var Cocktail = React.createClass({
                         <h3>{cocktail.name}</h3>
                     </div>
                 </div>
-                <div className="cocktail-img">
-                    <a href={cocktail.url}>
-                        <img src={"./static/" + cocktail.photo}/>
-                    </a>
-                </div>
-                <div className="cocktail-info-wrapper">
+                <div className="cocktail-main-wrapper">
+                    <div className="cocktail-img">
+                        <a href={cocktail.url}>
+                            <img src={"./static/" + cocktail.photo}/>
+                        </a>
+                    </div>
                     <div className="ingredients">
                         <h4>Ingredients</h4>
                         <ul>

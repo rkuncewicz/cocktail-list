@@ -1,0 +1,66 @@
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+
+    h3 {
+        color: #30a2cc !important;
+        text-shadow: 0 0 0 #ccc;
+    }
+
+    .stitched {
+        padding: 20px;
+        background: #ff0030;
+        color: #fff;
+        line-height: 1.3em;
+        border: 2px dashed #30A2CC;
+        border-radius: 10px;
+        box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+        text-shadow: -1px -1px #aa3030;
+        font-weight: normal;
+    }
+
+    .CocktailApp {
+       .cocktail-row {
+            page-break-before: always;
+            page-break-after: avoid;
+        }
+
+        .cocktail {
+            .stitched;
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+
+            .cocktail-img {
+                width: 40%;
+                margin: 0 auto;
+                display: table;
+            }
+            .cocktail-main-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+
+                .cocktail-img {
+                    order: 2;
+                }
+                .ingredients {
+                    order: 1;
+                    max-width: 15em;
+                }
+                .directions {
+                    order: 3;
+                } 
+            }
+        }
+
+        .grid-row-1 {
+        }
+        .grid-row-2 {
+            
+        }
+        .grid-row-3 {
+        }
+    }
+}
