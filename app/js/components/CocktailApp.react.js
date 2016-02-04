@@ -3,7 +3,6 @@ var React = require('react'),
     CocktailStore = require('../stores/CocktailStore'),
     Cocktail = require('../utils/Cocktail'),
     CocktailList = require('./CocktailList.react'),
-    CocktailIndex = require('./CocktailIndex.react'),
     Search = require('./Search.react'),
     _ = require('lodash'),
     superagent = require('superagent');
@@ -69,7 +68,6 @@ var CocktailApp = React.createClass({
                     </button>
                 </div>
                 <Search handleSearchChange={this.handleSearchChange} searchValue={this.state.searchValue} />
-                <CocktailIndex cocktails={this.state.cocktails} />
                 <CocktailList gridLayout={this.state.gridLayout} cocktails={this.state.cocktails} filter={this.state.searchValue}/>
             </div>
         );
