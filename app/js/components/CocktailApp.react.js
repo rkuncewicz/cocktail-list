@@ -54,12 +54,6 @@ var CocktailApp = React.createClass({
                     <button onClick={this.changeGrid.bind(this, [1,1])}>
                         <span className="glyphicon glyphicon-stop" aria-hidden="true"></span>
                     </button>
-                    <button onClick={this.changeGrid.bind(this, [2,1])}>
-                        <div className="double-grid-icon">
-                            <span className="glyphicon glyphicon-stop glyphicon-doublegrid double-grid-left" aria-hidden="true"></span>
-                            <span className="glyphicon glyphicon-stop glyphicon-doublegrid" aria-hidden="true"></span>
-                        </div>
-                    </button>
                     <button onClick={this.changeGrid.bind(this, [2,2])}>
                         <span className="glyphicon glyphicon-th-large" aria-hidden="true"></span>
                     </button>

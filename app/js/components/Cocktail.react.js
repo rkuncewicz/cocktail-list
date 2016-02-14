@@ -24,30 +24,32 @@ var Cocktail = React.createClass({
                     </div>
                 </div>
                 <div className="cocktail-main-wrapper">
-                    <div className="cocktail-img">
+                    <div className="image">
                         <a href={cocktail.url}>
                             <img src={"./static/" + cocktail.photo}/>
                         </a>
                     </div>
-                    <div className="ingredients">
-                        <h4>Ingredients</h4>
-                        <ul>
-                            {cocktail.ingredients.map(function(ingredient, index) {
-                                return (
-                                    <li key={index}>{ingredient.main.format()}</li>
-                                )
-                            })}
-                        </ul>
-                    </div>
-                    <div className="directions">
-                        <h4>Directions</h4>
-                        <ol>
-                            {cocktail.directions.map(function(direction, index) {
-                                return (
-                                    <li key={index}>{direction}</li>
-                                )
-                            })}
-                        </ol>
+                    <div className="cocktail-info-wrapper">
+                        <div className="ingredients">
+                            <h4>Ingredients</h4>
+                            <ul>
+                                {cocktail.ingredients.map(function(ingredient, index) {
+                                    return (
+                                        <li key={index}>{ingredient.main.format()}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                        <div className="directions">
+                            <h4>Directions</h4>
+                            <ol>
+                                {cocktail.directions.map(function(direction, index) {
+                                    return (
+                                        <li key={index}>{direction}</li>
+                                    )
+                                })}
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>

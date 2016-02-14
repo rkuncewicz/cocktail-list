@@ -1,6 +1,8 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
 @import "./print.less";
 
+@main-colour: #30a2cc;
+
 .CocktailApp {
     .container-fixed();
     font-size: 12px;
@@ -15,7 +17,7 @@
         }
 
         button {
-            .make-md-column(3);
+            .make-md-column(4);
             background: none;
             border: none;
             font-size: 3em;
@@ -42,53 +44,39 @@
         }   
     }
 
-    .cocktail-index {
-        margin: 2em;
-
-        .cocktail-index-title {
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: 1px 1px 1px #000;
-            color: #30a2cc;
-        }
-
-        ul {
-            -webkit-column-count: 2; /* Chrome, Safari, Opera */
-            -moz-column-count: 2; /* Firefox */
-            column-count: 2;
-
-            list-style-type: none;
-
-            li {
-                margin: 10px 0;
-
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
-        
-    }
-
     .cocktail-row {
         page-break-before: always;
+
+        hr {
+            background-color: @main-colour;
+            width: 150px;
+            height: 3px;
+        }
     }
 
     .grid-row-1 {
         .make-xs-column(12);
-        .cocktail .cocktail-info-wrapper {
+        .cocktail .cocktail-main-wrapper {
+            display: flex;
+
+            .image {
+                padding: 30px;
+                img {
+                    width: 500px;
+                }
+            }
             .ingredients {
-                .make-xs-column(3);
+                margin-top: 20px;
             }
             .directions {
-                .make-xs-column(9);
+                margin-top: 30px;
             }
         }
     }
     .grid-row-2 {
         .make-xs-column(6);
         .cocktail .cocktail-title-wrapper {
-            height: 7em;
+            height: 7   em;
             width: 100%;
             display: table;
 
@@ -128,16 +116,16 @@
 
         h4 {
             text-shadow: 1px 1px 1px #000;
-            color: #30a2cc;
+            color: @main-colour;
         }
 
         .cocktail-title {
             text-align: center;
-            color: #30a2cc;
+            color: @main-colour;
             text-transform: uppercase;
         }
 
-        .cocktail-img {
+        .image {
             text-align: center;
 
             img {
