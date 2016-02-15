@@ -5,7 +5,7 @@ module.exports = {
 	entry: ["./app/js/app.jsx"],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: "/assets/",
+		publicPath: "/dist/",
 		filename: "bundle.js"
 	},
     resolve: {
