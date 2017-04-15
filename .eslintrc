@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "arrow-parens": "off",
+    "func-names": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-console": "off",
+    "object-shorthand": "off",
+    "prefer-spread": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-filename-extension": "off",
+    "require-yield": "off",
+    "strict": "off",
+    "react/self-closing-comp": "off"
+  },
+  "plugins": [
+    "babel",
+    "react"
+  ]
+}

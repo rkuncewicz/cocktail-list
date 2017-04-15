@@ -1,4 +1,11 @@
+# dependencies
 node_modules
-dist
-demo/js
+bower_components
+
+# production
+build
+/dist
+
+# misc
 .DS_Store
+.env
