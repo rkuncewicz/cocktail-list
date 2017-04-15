@@ -13,3 +13,4 @@ deployment:
     branch: master
     commands:
       - aws s3 sync app/build s3://cocktail-app --delete
+      - npm run deploy

@@ -1,0 +1,85 @@
+# serverless.yml
+
+service: recipes
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+
+functions:
+  createRecipe:
+    handler: handler.createRecipe
+    description: Create recipe
+    events:
+      - http:
+          path: recipes/create
+          method: post
+  updateRecipe:
+    handler: handler.updateRecipe
+    description: Update recipe
+    events:
+      - http:
+          path: recipes/update
+          method: put
+  deleteRecipe:
+    handler: handler.deleteRecipe
+    description: Delete recipe
+    events:
+      - http:
+          path: recipes/delete
+          method: delete
+  getRecipe:
+    handler: hander.getRecipe
+    description: Get recipe
+    events:
+      - http:
+          path: recipes/get
+          method: get
+
+resources:
+  Resources:
+    recipes:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: recipelist-demo-recipes
+        AttributeDefinitions:
+          - AttributeName: UserName
+            AttributeType: S
+          - AttributeName: RecipeName
+            AttributeType: S
+        KeySchema:
+          - AttributeName: UserName
+            KeyType: HASH
+          - AttributeName: RecipeName
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+package:
+  individually: true
+  include:
+    - api/**
+  exclude:
+    - app/**
+    - config/**
+    - node_modules/**
+    - scripts/**
+    - .editorconfig
+    - .eslintignore
+    - .eslintrc
+    - .gitignore
+    - .npmignore
+    - package.json
+    - README.md

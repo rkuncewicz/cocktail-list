@@ -8,7 +8,8 @@
     "start": "npm run start:app",
     "start:api": "",
     "start:app": "node scripts/start.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "deploy": "serverless deploy"
   },
   "author": "Robert Kuncewicz",
   "license": "UNLICENSED",
