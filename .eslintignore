@@ -1,0 +1,6 @@
+/dist/**
+/**/node_modules/**
+/coverage/**
+/app/build/**
+/config/**
+/scripts/**
